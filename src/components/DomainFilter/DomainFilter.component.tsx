@@ -12,13 +12,13 @@ interface Props {
 }
 
 class DomainFilter extends React.Component<Props, State> {
+  state: State = {
+    countries: [],
+    classifications: [],
+    subClassifications: []
+  }
   componentDidMount() {
-    const { domains } = this.props
-    this.state = {
-      countries: [],
-      classifications: [],
-      subClassifications: []
-    }
+    const { domains } = this.props;
 
     const s: any = {};
 
